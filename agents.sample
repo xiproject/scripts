@@ -1,0 +1,19 @@
+#################################################
+#                                               #
+# Agent configuration file. Copy this to        #
+# 'agents'.                                     #
+#                                               #
+# Specify each agent to be run on a new line.   #
+#                                               #
+# Agents will be run in the order listed.       #
+#                                               #
+# Whitespace and lines beginning with a '#'     #
+# will be ignored.                              #
+#                                               #
+#################################################
+
+InputManager
+speak
+gmail
+reminder
+wolfram
