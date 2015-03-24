@@ -1,7 +1,6 @@
 #################################################
 #                                               #
-# Agent configuration file. Copy this to        #
-# 'agents'.                                     #
+# Agent configuration file.                     #
 #                                               #
 # Specify each agent to be run on a new line.   #
 #                                               #
@@ -12,8 +11,9 @@
 #                                               #
 #################################################
 
-InputManager
+presence
 speak
 gmail
-reminder
+chrome-stt
 wolfram
+greet
