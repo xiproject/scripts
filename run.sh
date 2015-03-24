@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 LOGDIR="logs"
 
 if [ ! -d "$LOGDIR" ]; then
@@ -19,9 +21,11 @@ while read agent; do
     (
         unset http_proxy && unset https_proxy
         cd "agents/$agent"
-        node index.js 2>&1 >> "../../logs/$agent.log"
+        node index.js --logfile "../../logs/$agent.log"
     ) &
     echo "Starting agent: $agent."
+    sleep 0.5
+
 done < scripts/agents
 
 echo "Xi started"
