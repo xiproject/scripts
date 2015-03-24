@@ -18,13 +18,12 @@ echo "Starting xi-core."
 while read agent; do
     [ -z "$agent" ] && continue # skip empty lines
     [[ $agent == \#* ]] && continue # skip comments
+    sleep 0.5
     (
-        unset http_proxy && unset https_proxy
         cd "agents/$agent"
         node index.js --logfile "../../logs/$agent.log"
     ) &
     echo "Starting agent: $agent."
-    sleep 0.5
 
 done < scripts/agents
 
