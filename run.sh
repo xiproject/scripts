@@ -12,7 +12,7 @@ echo "Starting xi-core."
 (
     unset http_proxy && unset https_proxy
     cd xi-core
-    grunt start 2>&1 >> "../logs/xi-core.log"
+    npm start 2>&1 >> "../logs/xi-core.log"
 ) &
 
 while read agent; do
