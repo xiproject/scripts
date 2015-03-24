@@ -14,6 +14,9 @@ if [ ! -f $AGENTS_FILE ]; then
     (set -x && exec cp "$SCRIPTS_DIR/agents.sample" $AGENTS_FILE)
 fi
 
+(set -x && cd xi-core && exec npm install --production)
+(set -x && cd xal-javascript && exec npm install --production)
+
 while read agent; do
     [ -z "$agent" ] && continue # skip empty lines
     [[ $agent == \#* ]] && continue # skip comments

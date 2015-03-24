@@ -1,5 +1,11 @@
 #!/bin/bash
 
+LOGDIR="logs"
+
+if [ ! -d "$LOGDIR" ]; then
+    mkdir "$LOGDIR"
+fi
+
 echo "Starting xi-core."
 (
     unset http_proxy && unset https_proxy
